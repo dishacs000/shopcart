@@ -42,7 +42,7 @@ app.use(session({
 //Create Route for Load Product Data
 app.get("/", (request, response) => {
 
-	const query = `SELECT * FROM product LIMIT 3`;
+	const query = `SELECT * FROM product`;
 
 	//Execute Query
 	connection.query(query, (error, result) => {
@@ -114,7 +114,7 @@ app.get('/remove_item', (request, response) => {
 
 });
 
-app.listen(3003, () => {
+app.listen(3000, () => {
 
 	console.log('Server has started on port number 3000');
 
